@@ -20,21 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module decoder(SEL, en, y);
-    input [1:0] SEL;
-    input en;
-    output reg [3:0] y;
+module decoder(
+    input [1:0] sel,
+    input en,
+    output reg [3:0] y
+    );
     
-    always @ (SEL, en)
+    always @ (sel, en)
     begin
-        if (en == 0)
+        if (en == 1)
             y = 4'b1111;
         else
             //the decoding protocol here is arbitrary
             //how the input decodes to the output is implementation dependent
             //it is what you the designer want it to be
             //here it just disables the nth place bit where n is the value of SEL
-            case(SEL)
+            case(sel)
                 2'b00: y = 4'b1110;
                 2'b01: y = 4'b1101;
                 2'b10: y = 4'b1011;

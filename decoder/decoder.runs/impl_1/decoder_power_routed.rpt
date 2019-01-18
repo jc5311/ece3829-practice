@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Jan 18 07:51:46 2019
+| Date             : Fri Jan 18 13:10:57 2019
 | Host             : SilverPhantasm running 64-bit major release  (build 9200)
 | Command          : report_power -file decoder_power_routed.rpt -pb decoder_power_summary_routed.pb -rpx decoder_power_routed.rpx
 | Design           : decoder
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.055        |
+| Total On-Chip Power (W)  | 2.041        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.978        |
+| Dynamic (W)              | 1.964        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 74.7         |
-| Junction Temperature (C) | 35.3         |
+| Max Ambient (C)          | 74.8         |
+| Junction Temperature (C) | 35.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,12 +52,12 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.010 |        4 |       --- |             --- |
-|   LUT as Logic |     0.010 |        2 |     20800 |           <0.01 |
-| Signals        |     0.032 |        7 |       --- |             --- |
+| Slice Logic    |     0.008 |        4 |       --- |             --- |
+|   LUT as Logic |     0.008 |        2 |     20800 |           <0.01 |
+| Signals        |     0.020 |        7 |       --- |             --- |
 | I/O            |     1.936 |        7 |       106 |            6.60 |
 | Static Power   |     0.077 |          |           |                 |
-| Total          |     2.055 |          |           |                 |
+| Total          |     2.041 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,7 +67,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.068 |       0.054 |      0.014 |
+| Vccint    |       1.000 |     0.053 |       0.040 |      0.014 |
 | Vccaux    |       1.800 |     0.083 |       0.071 |      0.013 |
 | Vcco33    |       3.300 |     0.546 |       0.545 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -134,7 +134,7 @@ Table of Contents
 +---------+-----------+
 | Name    | Power (W) |
 +---------+-----------+
-| decoder |     1.978 |
+| decoder |     1.964 |
 +---------+-----------+
 
 

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -38,8 +39,8 @@ read_verilog -library xil_defaultlib C:/Users/jcpsp/Desktop/githubs/ece3829-prac
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jcpsp/Desktop/githubs/ece3829-practice/Basys-3-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/jcpsp/Desktop/githubs/ece3829-practice/Basys-3-Master.xdc]
+read_xdc C:/Users/jcpsp/Desktop/githubs/ece3829-practice/decoder/decoder.srcs/constrs_1/new/master_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/jcpsp/Desktop/githubs/ece3829-practice/decoder/decoder.srcs/constrs_1/new/master_constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
