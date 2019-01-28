@@ -27,12 +27,18 @@ module counter8bit(
     output reg [7:0] led
     );
     
-    always @ (posedge clk)
+    always @ (posedge clk or posedge clr)
         begin
             if (clr)
+            begin
                 cnt <= 0;
+            end
+            
             else
+            begin
             cnt <= cnt + 1'b1;
-                
+            end
+            
+            led <= cnt;
         end
 endmodule
